@@ -1,0 +1,14 @@
+#Archivos del sistema MAC
+.DS_Store
+
+#Archivos del proyecto Eclipse
+.settings
+.project
+.classpath
+
+#Archivos .class
+.class
+
+#Archivos del proyecto Intellij
+*/.gitgnore
+*/.idea
