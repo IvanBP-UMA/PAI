@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestRunnerPr12
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+=======
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.436 s -- in TestRunnerPr12
+>>>>>>> b3419fd0b090f41a3c479cf045e91eaded132df6

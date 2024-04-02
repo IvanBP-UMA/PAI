@@ -1,72 +1,5 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="0" failures="0" name="TestRunnerPr12" time="0" errors="0" skipped="0">
-  <properties>
-    <property name="idea.version" value="2022.2.5"/>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="19.0.1+10-21"/>
-    <property name="sun.boot.library.path" value="C:\Users\ivan\.jdks\openjdk-19.0.1\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ivan\Documents\Estudios Iván\1º Informática\2o Cuatrimestre\PAI\Practicas&amp;Ejercicios\pa1p12"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=";"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="sun.os.patch.level" value=""/>
-    <property name="user.script" value=""/>
-    <property name="user.country" value="ES"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\ivan\Documents\Estudios Iván\1º Informática\2o Cuatrimestre\PAI\Practicas&amp;Ejercicios\pa1p12"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="19.0.1+10-21"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\ivan\AppData\Local\Temp\"/>
-    <property name="line.separator" value="
-"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.variant" value=""/>
-    <property name="stderr.encoding" value="UTF-8"/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven-event-listener.jar"/>
-    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3\bin\m2.conf"/>
-    <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="stdout.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="C:\Users\ivan\.jdks\openjdk-19.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python38\Scripts\;C:\Python38\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MATLAB\R2022a\runtime\win64;C:\Program Files\MATLAB\R2022a\bin;C:\Program Files\MATLAB\R2019\runtime\win64;C:\Program Files\MATLAB\R2019\bin;C:\Program Files\Inkscape\bin;D:\BibliotecasHDD\DescargasHDD\Python;D:\Programas_HDD\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenSSL-Win64\bin\;C:\opencv\x64\vc16\bin;C:\Program Files\CMake\bin;C:\ProgramData\chocolatey\lib\cunit\lib;C:\ProgramData\chocolatey\lib\tinyxml2\lib;C:\ProgramData\chocolatey\lib\log4cxx\lib;C:\ProgramData\chocolatey\lib\bullet\lib;C:\Program Files\Graphviz\bin;C:\Qt\5.15.0\msvc2019_64\bin;C:\Program Files\OpenVPN\bin;C:\FFmpeg\bin;C:\Program Files\Git\cmd;C:\Program Files\Tailscale\;C:\Users\ivan\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\msys64\mingw64\bin;C:\Program Files (x86)\Bitvise SSH Client;C:\Users\ivan\AppData\Local\Microsoft\WindowsApps;C:\Users\ivan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ivan\AppData\Roaming\npm;C:\php-8.1.11;C:\Users\ivan\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\ivan\AppData\Local\gitkraken\bin;C:\Program Files\apache-maven-3.9.6\bin;;."/>
-    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3/conf"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="63.0"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\ivan"/>
-    <property name="user.timezone" value="Europe/Madrid"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="19"/>
-    <property name="user.name" value="ivan"/>
-    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
-    <property name="java.vm.specification.version" value="19"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.5 install"/>
-    <property name="java.home" value="C:\Users\ivan\.jdks\openjdk-19.0.1"/>
-    <property name="user.language" value="es"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="19.0.1"/>
-    <property name="native.encoding" value="Cp1252"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="sun.stderr.encoding" value="UTF-8"/>
-    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3"/>
-    <property name="file.separator" value="\"/>
-    <property name="java.version.date" value="2022-10-18"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.stdout.encoding" value="UTF-8"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
-=======
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestRunnerPr12" time="0.436" tests="0" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestRunnerPr12$JUnitTestLibreriaMain" time="0.031" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -124,6 +57,9 @@
     <property name="java.vm.version" value="21.0.2+13-LTS-58"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
->>>>>>> b3419fd0b090f41a3c479cf045e91eaded132df6
   </properties>
+  <testcase name="LibreriaMainMainTest1" classname="TestRunnerPr12$JUnitTestLibreriaMain" time="0.027">
+    <system-out><![CDATA[Start of PruebaLibreria JUnit Test
+]]></system-out>
+  </testcase>
 </testsuite>
