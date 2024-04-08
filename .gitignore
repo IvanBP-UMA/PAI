@@ -10,5 +10,6 @@
 .class
 
 #Archivos del proyecto Intellij
-*/.gitgnore
+*/.git/
+*/.gitignore
 */.idea

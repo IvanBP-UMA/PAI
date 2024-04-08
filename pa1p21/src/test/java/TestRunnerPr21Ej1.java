@@ -1,7 +1,6 @@
 
 //--------------------------------------------------------------------------
 
-import java.io.PrintWriter;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.AfterAll;
@@ -115,12 +114,12 @@ public class TestRunnerPr21Ej1 {
 		@BeforeAll
 		public void beforeClass() {
 			// Code executed before the first test method
-			System.out.println("Start of LibroOferta JUnit Test");
+			System.out.println("Start of libreria.LibroOferta JUnit Test");
 		}
 		@AfterAll
 		public void afterClass() {
 			// Code executed after the last test method
-			System.out.println("End of LibroOferta JUnit Test");
+			System.out.println("End of libreria.LibroOferta JUnit Test");
 		}
 		@BeforeEach
 		public void setUp() {
@@ -135,12 +134,12 @@ public class TestRunnerPr21Ej1 {
 		@Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
 		public void salesBookCtorTest1() {
 			assertAll("salesBookCtorTest1",
-					() -> assertTrue(((Object)lo1 instanceof Libro), "\n> Error: LibroOferta extends Book:"),
-					() -> assertEquals("Isaac Asimov", lo1.getAutor(), "\n> Error: new LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): Author:"),
-					() -> assertEquals("La Fundacion", lo1.getTitulo(), "\n> Error: new LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): Title:"),
-					() -> assertEquals(7.30, lo1.getPrecioBase(), 1e-6, "\n> Error: new LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): BasePrice:"),
-					() -> assertEquals(20.00, lo1.getDescuento(), 1e-6, "\n> Error: new LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): DiscPerc:"),
-					() -> assertEquals(10.00, LibroOferta.getIVA(), 1e-6, "\n> Error: new LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): VatPerc:"));
+					() -> assertTrue(((Object)lo1 instanceof Libro), "\n> Error: libreria.LibroOferta extends Book:"),
+					() -> assertEquals("Isaac Asimov", lo1.getAutor(), "\n> Error: new libreria.LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): Author:"),
+					() -> assertEquals("La Fundacion", lo1.getTitulo(), "\n> Error: new libreria.LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): Title:"),
+					() -> assertEquals(7.30, lo1.getPrecioBase(), 1e-6, "\n> Error: new libreria.LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): BasePrice:"),
+					() -> assertEquals(20.00, lo1.getDescuento(), 1e-6, "\n> Error: new libreria.LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): DiscPerc:"),
+					() -> assertEquals(10.00, LibroOferta.getIVA(), 1e-6, "\n> Error: new libreria.LibroOferta(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): VatPerc:"));
 		}
 		@Test
 		@Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
@@ -753,7 +752,9 @@ public class TestRunnerPr21Ej1 {
 				JUnitTestLibreriaOferta.class ,
 				JUnitTestMainLibreriaOferta.class 
 				})
-				public static class JUnitTestSuite { /*empty*/ }
+				public static class JUnitTestSuite {
+
+ }
 	//----------------------------------------------------------------------
 	//--TestRunner-----------------------------------------------------
 	//----------------------------------------------------------------------

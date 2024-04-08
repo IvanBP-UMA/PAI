@@ -1,6 +1,7 @@
 package datos;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Datos {
@@ -35,12 +36,10 @@ public class Datos {
                 addedValues++;
             }
         }
-        try{
-            media /= addedValues;
-        }catch (Exception e){
+        if (addedValues == 0){
             throw new DatosException("No hay datos en el rango especificado");
         }
-        return media;
+        return media/addedValues;
     }
 
     public double calcDesvTipica(){
@@ -56,13 +55,16 @@ public class Datos {
                 addedValues++;
             }
         }
-        desvTipica /= addedValues;
-        return desvTipica;
+        return Math.sqrt(desvTipica/addedValues);
     }
 
     public void setRango(String rango){
         try{
-            String[] valores = rango.split(";");
+            String valores[] = new String[2];
+            int pos = rango.indexOf(';');
+            valores[0] = rango.substring(0, pos);
+            valores[1] = rango.substring(pos+1);
+
             min = Double.parseDouble(valores[0]);
             max = Double.parseDouble(valores[1]);
         }catch(Exception e){

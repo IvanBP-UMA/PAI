@@ -1,4 +1,3 @@
-
 //--------------------------------------------------------------------------
 
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -110,7 +109,7 @@ public class TestRunnerPr21Ej2 {
 	@Nested
 	@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 	public class JUnitTestLibroOferta {
-		private LibroOferta lo1;
+		private libreria.LibroOferta lo1;
 		@BeforeAll
 		public void beforeClass() {
 			// Code executed before the first test method
@@ -124,7 +123,7 @@ public class TestRunnerPr21Ej2 {
 		@BeforeEach
 		public void setUp() {
 			// Code executed before each test
-			lo1 = new LibroOferta("Isaac Asimov", "La Fundacion", 7.30, 20.0);
+			lo1 = new libreria.LibroOferta("Isaac Asimov", "La Fundacion", 7.30, 20.0);
 		}
 		@AfterEach
 		public void tearDown() {
@@ -139,7 +138,7 @@ public class TestRunnerPr21Ej2 {
 					() -> assertEquals("La Fundacion", lo1.getTitulo(), "\n> Error: new BookOnSale(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): Title:"),
 					() -> assertEquals(7.30, lo1.getPrecioBase(), 1e-6, "\n> Error: new BookOnSale(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): BasePrice:"),
 					() -> assertEquals(20.00, lo1.getDescuento(), 1e-6, "\n> Error: new BookOnSale(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): DiscPerc:"),
-					() -> assertEquals(10.00, LibroOferta.getIVA(), 1e-6, "\n> Error: new BookOnSale(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): VatPerc:"));
+					() -> assertEquals(10.00, libreria.LibroOferta.getIVA(), 1e-6, "\n> Error: new BookOnSale(\"Isaac Asimov\", \"La Fundacion\", 7.30, 20.0): VatPerc:"));
 		}
 		@Test
 		@Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
@@ -148,7 +147,7 @@ public class TestRunnerPr21Ej2 {
 			precond("La Fundacion", lo1.getTitulo());
 			precond(7.30, lo1.getPrecioBase(), 1e-6);
 			precond(20.0, lo1.getDescuento(), 1e-6);
-			precond(10.0, LibroOferta.getIVA(), 1e-6);
+			precond(10.0, libreria.LibroOferta.getIVA(), 1e-6);
 			assertEquals(6.424, lo1.getPrecioFinal(), 1e-6, "\n> Error: lo1.getPrecioFinal(): ");
 		}
 		@Test
@@ -158,7 +157,7 @@ public class TestRunnerPr21Ej2 {
 			precond("La Fundacion", lo1.getTitulo());
 			precond(7.30, lo1.getPrecioBase(), 1e-6);
 			precond(20.0, lo1.getDescuento(), 1e-6);
-			precond(10.0, LibroOferta.getIVA(), 1e-6);
+			precond(10.0, libreria.LibroOferta.getIVA(), 1e-6);
 			Libro.setIVA(20.00);
 			double presentVAT = Libro.getIVA();
 			Libro.setIVA(10.00);
@@ -171,7 +170,7 @@ public class TestRunnerPr21Ej2 {
 			precond("La Fundacion", lo1.getTitulo());
 			precond(7.30, lo1.getPrecioBase(), 1e-6);
 			precond(20.0, lo1.getDescuento(), 1e-6);
-			precond(10.0, LibroOferta.getIVA(), 1e-6);
+			precond(10.0, libreria.LibroOferta.getIVA(), 1e-6);
 			assertEquals(normalize("(Isaac Asimov; La Fundacion; 7.3; 20.0%; 5.84; 10.0%; 6.4239999999999995)"),
 						 normalize(lo1.toString()),
 						 "\n> Error: lo1.toString():");
@@ -232,7 +231,7 @@ public class TestRunnerPr21Ej2 {
 //				fail("\n> Error: el array de books no se ha creado correctamente");
 //			}
 //			return libs;
-//		} 
+//		}
 		@Test
 		@Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
 		public void bookStoreCtorTest1() {
@@ -249,8 +248,8 @@ public class TestRunnerPr21Ej2 {
 			lr1.addLibro("George Orwell", "1984", 6.20);
 			lr1.addLibro("Ray Bradbury", "Fahrenheit 451", 7.40);
 			//------------------------
-			assertEquals(normalize("[(Isaac Asimov; La Fundacion; 7.3; 10.0%; 8.03), (Aldous Huxley; Un Mundo Feliz; 6.5; 10.0%; 7.15), (William Gibson; Neuromante; 8.3; 10.0%; 9.13), (George Orwell; 1984; 6.2; 10.0%; 6.82), (Ray Bradbury; Fahrenheit 451; 7.4; 10.0%; 8.14)]"), 
-					normalize(lr1.toString()), 
+			assertEquals(normalize("[(Isaac Asimov; La Fundacion; 7.3; 10.0%; 8.03), (Aldous Huxley; Un Mundo Feliz; 6.5; 10.0%; 7.15), (William Gibson; Neuromante; 8.3; 10.0%; 9.13), (George Orwell; 1984; 6.2; 10.0%; 6.82), (Ray Bradbury; Fahrenheit 451; 7.4; 10.0%; 8.14)]"),
+					normalize(lr1.toString()),
 					"\n> Error: addLibro1(): toString()");
 		}
 		@Test
@@ -262,8 +261,8 @@ public class TestRunnerPr21Ej2 {
 			lr1.addLibro("george orwell", "1984", 4.20);
 			lr1.addLibro("ray bradbury", "fahrenheit 451", 5.40);
 			//------------------------
-			assertEquals(normalize("[(isaac asimov; la fundacion; 5.3; 10.0%; 5.83), (aldous huxley; un mundo feliz; 4.5; 10.0%; 4.95), (william gibson; neuromante; 6.3; 10.0%; 6.93), (george orwell; 1984; 4.2; 10.0%; 4.62), (ray bradbury; fahrenheit 451; 5.4; 10.0%; 5.94)]"), 
-					normalize(lr1.toString()), 
+			assertEquals(normalize("[(isaac asimov; la fundacion; 5.3; 10.0%; 5.83), (aldous huxley; un mundo feliz; 4.5; 10.0%; 4.95), (william gibson; neuromante; 6.3; 10.0%; 6.93), (george orwell; 1984; 4.2; 10.0%; 4.62), (ray bradbury; fahrenheit 451; 5.4; 10.0%; 5.94)]"),
+					normalize(lr1.toString()),
 					"\n> Error: addLibro2.1(): toString()");
 			//------------------------
 			lr1.addLibro("Aldous Huxley", "Un Mundo Feliz", 6.50);
@@ -272,8 +271,8 @@ public class TestRunnerPr21Ej2 {
 			lr1.addLibro("Isaac Asimov", "La Fundacion", 7.30);
 			lr1.addLibro("George Orwell", "1984", 6.20);
 			//------------------------
-			assertEquals(normalize("[(Isaac Asimov; La Fundacion; 7.3; 10.0%; 8.03), (Aldous Huxley; Un Mundo Feliz; 6.5; 10.0%; 7.15), (William Gibson; Neuromante; 8.3; 10.0%; 9.13), (George Orwell; 1984; 6.2; 10.0%; 6.82), (Ray Bradbury; Fahrenheit 451; 7.4; 10.0%; 8.14)]"), 
-					normalize(lr1.toString()), 
+			assertEquals(normalize("[(Isaac Asimov; La Fundacion; 7.3; 10.0%; 8.03), (Aldous Huxley; Un Mundo Feliz; 6.5; 10.0%; 7.15), (William Gibson; Neuromante; 8.3; 10.0%; 9.13), (George Orwell; 1984; 6.2; 10.0%; 6.82), (Ray Bradbury; Fahrenheit 451; 7.4; 10.0%; 8.14)]"),
+					normalize(lr1.toString()),
 					"\n> Error: addLibro2.2(): toString()");
 		}
 		@Test
@@ -591,8 +590,8 @@ public class TestRunnerPr21Ej2 {
 			lrof1.addLibro("George Orwell", "1984", 6.20);
 			lrof1.addLibro("Ray Bradbury", "Fahrenheit 451", 7.40);
 			//------------------------
-			assertEquals(normalize("20.0%[george orwell, isaac asimov] [(Isaac Asimov; La Fundacion; 7.3; 20.0%; 5.84; 10.0%; 6.4239999999999995), (Aldous Huxley; Un Mundo Feliz; 6.5; 10.0%; 7.15), (William Gibson; Neuromante; 8.3; 10.0%; 9.13), (George Orwell; 1984; 6.2; 20.0%; 4.96; 10.0%; 5.4559999999999995), (Ray Bradbury; Fahrenheit 451; 7.4; 10.0%; 8.14)]"), 
-					normalize(lrof1.toString()), 
+			assertEquals(normalize("20.0%[george orwell, isaac asimov] [(Isaac Asimov; La Fundacion; 7.3; 20.0%; 5.84; 10.0%; 6.4239999999999995), (Aldous Huxley; Un Mundo Feliz; 6.5; 10.0%; 7.15), (William Gibson; Neuromante; 8.3; 10.0%; 9.13), (George Orwell; 1984; 6.2; 20.0%; 4.96; 10.0%; 5.4559999999999995), (Ray Bradbury; Fahrenheit 451; 7.4; 10.0%; 8.14)]"),
+					normalize(lrof1.toString()),
 					"\n> Error: addLibro1(): toString()");
 		}
 		@Test
@@ -857,14 +856,16 @@ public class TestRunnerPr21Ej2 {
 				JUnitTestOfertaAutor.class ,
 				JUnitTestOfertaPrecio.class ,
 				JUnitTestLibreriaOfertaFlex.class ,
-				JUnitTestLibreriaOfertaFlexMain.class 
+				JUnitTestLibreriaOfertaFlexMain.class
 				})
-				public static class JUnitTestSuite { /*empty*/ }
+				public static class JUnitTestSuite {
+
+ }
 	//----------------------------------------------------------------------
 	//--TestRunner-----------------------------------------------------
 	//----------------------------------------------------------------------
 	public static void main(String[] args) {
-		final LauncherDiscoveryRequest request = 
+		final LauncherDiscoveryRequest request =
 				LauncherDiscoveryRequestBuilder.request()
 				.selectors(
 						selectClass(JUnitTestLibro.class),
@@ -885,7 +886,7 @@ public class TestRunnerPr21Ej2 {
 		TestExecutionSummary summary = listener.getSummary();
 
 //		summary.printTo(new PrintWriter(System.out, true));
-		
+
 		long abortedCount = summary.getTestsAbortedCount();
 		long succeededCount = summary.getTestsFoundCount();
 		long foundCount = summary.getTestsSucceededCount();
