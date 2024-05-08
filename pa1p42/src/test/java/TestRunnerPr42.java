@@ -1,4 +1,3 @@
-/*
 
 //--------------------------------------------------------------------------
 
@@ -557,8 +556,8 @@ public class TestRunnerPr42 {
 				JUnitTestMainContadorPalabras.class ,
 				JUnitTestMainPalabraEnTexto.class
 				})
-				public static class JUnitTestSuite { */
-/*empty*//*
+				public static class JUnitTestSuite {
+
  }
 	//----------------------------------------------------------------------
 	//--TestRunner-----------------------------------------------------
@@ -1158,4 +1157,3 @@ public class TestRunnerPr42 {
 	//----------------------------------------------------------------------
 }
 //--------------------------------------------------------------------------
-*/

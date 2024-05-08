@@ -16,17 +16,6 @@ public class ContadorPalabras {
     }
 
     private int esta(String pal){
-        /*
-        PalabraEnTexto buscada = new PalabraEnTexto(pal);
-        int pos = -1;
-        boolean found = false;
-        for (int i = 0; i< palabras.size() && !found; i++){
-            if (palabras.get(i).equals(buscada)){
-                pos = i;
-                found = true;
-            }
-        }
-        return pos;*/
         PalabraEnTexto buscada = new PalabraEnTexto(pal);
         int i=0;
         while(i<palabras.size() && !palabras.get(i).equals(buscada)){
@@ -36,7 +25,7 @@ public class ContadorPalabras {
     }
 
     protected void incluye(String pal){
-        if (pal != null){
+        if (!pal.isEmpty()){
             int index = esta(pal);
             if (index<0){
                 palabras.add(new PalabraEnTexto(pal));
@@ -70,12 +59,12 @@ public class ContadorPalabras {
     public PalabraEnTexto encuentra(String pal){
         int index = esta(pal);
         if (index < 0){
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("No existe la palabra "+pal);
         }
         return palabras.get(index);
     }
 
-    public void presentarPalabras(String fichero) throws FileNotFoundException {
+    public void presentaPalabras(String fichero) throws FileNotFoundException {
         try (PrintWriter pw = new PrintWriter(fichero)){
             for (PalabraEnTexto palabra: palabras){
                 pw.println(palabra.toString());
@@ -83,7 +72,7 @@ public class ContadorPalabras {
         }
     }
 
-    public void presentarPalabras(PrintWriter pw){
+    public void presentaPalabras(PrintWriter pw){
         for (PalabraEnTexto palabra: palabras) {
             pw.println(palabra.toString());
         }

@@ -1,4 +1,4 @@
-/*
+
 import cuentapalabras.*;
 import java.util.NoSuchElementException;
 import java.io.PrintWriter;
@@ -64,4 +64,4 @@ public class Main {
 		}
 	}
 }
-*/
+

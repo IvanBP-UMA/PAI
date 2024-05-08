@@ -7,5 +7,7 @@ public class PruebaContadorPalabras {
                 "y esta es la segunda frase"
         };
         ContadorPalabras contador = new ContadorPalabras();
+        contador.incluyeTodas(datos, "[ ]");
+        System.out.println(contador);
     }
 }
