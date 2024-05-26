@@ -1,4 +1,3 @@
-/*
 
 //--------------------------------------------------------------------------
 //----------------------------------------------------------------------
@@ -43,7 +42,7 @@ public class TestRunnerPr51 {
 	//--JUnitTest-----------------------------------------------------------
 	//----------------------------------------------------------------------
 	@Nested
-	@TestInstance(TestInstance.Lifecycle.PER_CLASS) 
+	@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 	public class JUnitTestLink {
 		private Link p1;
 		@BeforeAll
@@ -154,7 +153,7 @@ public class TestRunnerPr51 {
 	//--JUnitTest-----------------------------------------------------------
 	//----------------------------------------------------------------------
 	@Nested
-	@TestInstance(TestInstance.Lifecycle.PER_CLASS) 
+	@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 	public class JUnitTestSite {
 		private Site p1;
 		@BeforeAll
@@ -256,7 +255,7 @@ public class TestRunnerPr51 {
 			int p1HashCode = p1.hashCode();
 			assertAll("siteHashCodeTest1",
 			//------------------------
-				() -> { 
+				() -> {
 					Site p2 = new Site("AAA");
 					assertEquals(p1HashCode, p2.hashCode(), "\n> Error: p2.hashCode(): ");
 					},
@@ -387,10 +386,9 @@ public class TestRunnerPr51 {
 		return normalize(wstr);
 	}
 	private static final String inputList = normalizeWeb("Web([A(0.00000), B(0.00000), C(0.00000), D(0.00000), E(0.00000), F(0.00000), G(0.00000), H(0.00000), I(0.00000), J(0.00000)], [B->C, F->G, G->H, A->C, D->F, F->H, A->D, E->H, B->F, J->C, I->C, E->B, G->E])");
-	*/
-/*private*//*
+private
  static final String[] inputSites = {
-		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", 
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
 	};
 	private static final String inputListClicks = normalizeWeb("Web([A(0.50000), B(0.67156), C(1.29288), D(0.62500), E(0.68627), F(0.98038), G(0.74509), H(1.10293), I(0.50000), J(0.50000)], [B->C, F->G, G->H, A->C, D->F, F->H, A->D, E->H, B->F, J->C, I->C, E->B, G->E])");
 	public static Web createWeb() throws Exception {
@@ -405,7 +403,7 @@ public class TestRunnerPr51 {
 		return web1;
 	}
 	@Nested
-	@TestInstance(TestInstance.Lifecycle.PER_CLASS) 
+	@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 	public class JUnitTestWeb {
 		@BeforeAll
 		public void beforeClass() {
@@ -470,7 +468,7 @@ public class TestRunnerPr51 {
 		@Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
 		public void webGetSiteTest2() throws Exception {
 			Web web2 = new Web();
-			Exception exception = assertThrows(NoSuchElementException.class, () -> web2.getSite("XXX"), 
+			Exception exception = assertThrows(NoSuchElementException.class, () -> web2.getSite("XXX"),
 					"\n> Error: web2.getSite(XXX): No exception thrown");
 			assertTrue(exception.getMessage().contains("XXX"), "\n> Error: web2.getSite(XXX): exception.getMessage().contains(XXX):");
 		}
@@ -478,7 +476,7 @@ public class TestRunnerPr51 {
 		@Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
 		public void webGetSiteTest3() throws Exception {
 			Web web1 = createWeb();
-			Exception exception = assertThrows(NoSuchElementException.class, () -> web1.getSite("XXX"), 
+			Exception exception = assertThrows(NoSuchElementException.class, () -> web1.getSite("XXX"),
 					"\n> Error: web1.getSite(XXX): No exception thrown");
 			assertTrue(exception.getMessage().contains("XXX"), "\n> Error: web1.getSite(XXX): exception.getMessage().contains(XXX):");
 		}
@@ -588,7 +586,7 @@ public class TestRunnerPr51 {
 	//--JUnitTest-----------------------------------------------------------
 	//----------------------------------------------------------------------
 	@Nested
-	@TestInstance(TestInstance.Lifecycle.PER_CLASS) 
+	@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 	public class JUnitTestSiteExtended {
 		private SiteExtended p1;
 		@BeforeAll
@@ -747,7 +745,7 @@ public class TestRunnerPr51 {
 		return web1;
 	}
 	@Nested
-	@TestInstance(TestInstance.Lifecycle.PER_CLASS) 
+	@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 	public class JUnitTestWebExtended {
 		@BeforeAll
 		public void beforeClass() {
@@ -864,7 +862,7 @@ public class TestRunnerPr51 {
 	//--JUnitTest-----------------------------------------------------------
 	//----------------------------------------------------------------------
 	@Nested
-	@TestInstance(TestInstance.Lifecycle.PER_CLASS) 
+	@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 	public class JUnitTestMainRank {
 		@BeforeAll
 		public void beforeClass() {
@@ -886,7 +884,7 @@ public class TestRunnerPr51 {
 		}
 		@Test
 		@Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
-		public void mainRankMainTest1() {
+		public void mainRankMainTest1() throws IllegalAccessException {
 			//----------------------
 			((java.util.Random)getMemberObject(null, Web.class, java.util.Random.class, "rndm")).setSeed(1);
 			//----------------------
@@ -914,14 +912,13 @@ public class TestRunnerPr51 {
 				JUnitTestWebExtended.class ,
 				JUnitTestMainRank.class
 				})
-				public static class JUnitTestSuite { */
-/*empty*//*
+				public static class JUnitTestSuite {
  }
 	//----------------------------------------------------------------------
 	//--TestRunner-----------------------------------------------------
 	//----------------------------------------------------------------------
 	public static void main(String[] args) {
-		final LauncherDiscoveryRequest request = 
+		final LauncherDiscoveryRequest request =
 				LauncherDiscoveryRequestBuilder.request()
 				.selectors(
 						selectClass(JUnitTestLink.class),
@@ -1400,7 +1397,7 @@ public class TestRunnerPr51 {
 			fail("\n> Error: la variable ["+memberId+"] no se ha creado correctamente");
 		}
 		return res;
-	} 
+	}
 	//----------------------------------------------------------------------
 	//----------------------------------------------------------------------
 	private static class SysOutCapture {
@@ -1514,4 +1511,3 @@ public class TestRunnerPr51 {
 	//----------------------------------------------------------------------
 }
 //--------------------------------------------------------------------------
-*/
