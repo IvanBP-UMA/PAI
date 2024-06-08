@@ -29,8 +29,7 @@ public class Main {
         Mundo.presentaEnConsola(ps.paisesPorContinenteAlturaDec());
     }
     
-    */
-/* SALIDA ESPERADA:
+ SALIDA ESPERADA:
     
     Países por altura
     1.5	[Pais(Indonesia, Asia, 1.58)]
@@ -112,7 +111,7 @@ public class Main {
     Oceania	[Pais(New Zealand, Oceania, 1.77), Pais(Tonga, Oceania, 1.761), Pais(Australia, Oceania, 1.756)]
     South America	[Pais(Argentina, South America, 1.745), Pais(Brazil, South America, 1.731), Pais(Chile, South America, 1.71), Pais(Colombia, South America, 1.706), Pais(Uruguay, South America, 1.7), Pais(Venezuela, South America, 1.69), Pais(Paraguay, South America, 1.69), Pais(Peru, South America, 1.64), Pais(Ecuador, South America, 1.635), Pais(Bolivia, South America, 1.6)]
 
-	*//*
+
 
 }
 

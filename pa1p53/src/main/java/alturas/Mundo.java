@@ -1,8 +1,6 @@
 package alturas;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Path;
 import java.util.*;
 
@@ -69,7 +67,71 @@ public class Mundo {
 
     public SortedMap<String, SortedSet<Pais>> paisesPorContinente(){
         SortedMap<String, SortedSet<Pais>> resMap = new TreeMap<>();
-        
+
+        for (Pais pais: paises){
+            String continente = pais.getContinente();
+            SortedSet<Pais> set = resMap.get(continente);
+            if (set == null){
+                set = new TreeSet<>();
+                resMap.put(continente, set);
+            }
+            set.add(pais);
+        }
+
+        return resMap;
     }
 
+    public SortedSet<Pais> paisesOrdenadosPorAltura(){
+        SortedSet<Pais> res = new TreeSet<>(new CompAltura());
+        res.addAll(paises);
+        return res;
+    }
+
+    public  SortedMap<String, SortedSet<Pais>> paisesPorContinenteAltura(){
+        SortedMap<String, SortedSet<Pais>> resMap = new TreeMap<>();
+
+        for (Pais pais: paises){
+            String continente = pais.getContinente();
+            SortedSet<Pais> set = resMap.get(continente);
+            if (set == null){
+                set = new TreeSet<>(new CompAltura());
+                resMap.put(continente, set);
+            }
+            set.add(pais);
+        }
+
+        return resMap;
+    }
+
+    public  SortedMap<String, SortedSet<Pais>> paisesPorContinenteAlturaDec(){
+        SortedMap<String, SortedSet<Pais>> resMap = new TreeMap<>();
+
+        for (Pais pais: paises){
+            String continente = pais.getContinente();
+            SortedSet<Pais> set = resMap.get(continente);
+            if (set == null){
+                set = new TreeSet<>(Comparator.comparing(Pais::getAltura, Comparator.reverseOrder()));
+                resMap.put(continente, set);
+            }
+            set.add(pais);
+        }
+
+        return resMap;
+    }
+
+    public SortedMap<String, SortedSet<Pais>> paisesPorInicial(){
+        SortedMap<String, SortedSet<Pais>> resMap = new TreeMap<>();
+
+        for (Pais pais: paises){
+            String continente = pais.getContinente();
+            SortedSet<Pais> set = resMap.get(continente);
+            if (set == null){
+                set = new TreeSet<>();
+                resMap.put(continente, set);
+            }
+            set.add(pais);
+        }
+
+        return resMap;
+    }
 }
